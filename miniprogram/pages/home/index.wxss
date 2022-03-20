@@ -141,7 +141,7 @@
     height: 250px;
     width: 50%;
     margin: 20px 20px 0 20px;
-    background-color: #2c2c2c;
+    background-color: #000;
     border-radius: 15px;
 }
 
@@ -149,6 +149,26 @@
     height: 250px;
     width: 50%;
     margin: 20px 20px 0 0;
-    background-color: #2c2c2c;
+    background-color: #30323C;
     border-radius: 15px;
+}
+
+.other-block {
+    position: relative;
+}
+
+.other-img {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    border-radius: 15px;
+}
+
+.other-msg {
+    height: 20%;
+    position: absolute;
+    font-size: 14px;
+    color: #fff;
+    left: 8px;
+    bottom: 0;
 }
