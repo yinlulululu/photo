@@ -1,0 +1,51 @@
+<!--pages/mine/index.wxml-->
+<view class="my-page">
+  <view class="top">
+    <view bindtap="userInfoAuth" class="user-image">
+      <image wx-if="{{authorized}}" style="width: 100%;height:100%;" mode="widthFix" src="{{userInfo.avatarUrl}}"></image>
+    </view>
+    <view wx:if="{{!canIUseGetUserProfile}}" class="user-name" style="width:6em;">
+      <view wx-if="{{!authorized}}" open-type="getUserInfo" bindgetuserinfo="bindGetUserInfo" size="mini">授权登录</view>
+      <view wx-if="{{authorized}}">{{userInfo.nickName}}</view>
+    </view>
+    <view wx:if="{{canIUseGetUserProfile}}" class="user-name" style="width:6em;">
+      <view wx-if="{{!authorized}}" bindtap="getUserProfile" size="mini" style="color: #eee;">授权登录</view>
+      <view wx-if="{{authorized}}">{{userInfo.nickName}}</view>
+    </view>
+  </view>
+  <view class="container">
+
+    <van-collapse accordion value="{{ activeNames }}" bind:change="onChange" style="width: 100%;">
+      <van-collapse-item title="联系作者" name="1" icon="service-o" style="width:100%;">
+        <image src="./images/mine.jpeg" show-menu-by-longpress="true" style="width: 260px;height: 260px;margin-left: 50%;transform: translateX(-50%);"></image>
+      </van-collapse-item>
+      <van-collapse-item title="反馈与建议" name="2" icon="comment-o">
+
+        <van-field value="{{ message }}" bind:change="onInput" type="textarea" placeholder="请输入留言" autosize border="{{ false }}" show-word-limit="true" maxlength="100" />
+        <van-button wx:if="{{message}}" bindtap="handleClick" class="message-btn" size="mini" color="#2c2c2c">提交</van-button>
+
+      </van-collapse-item>
+      <van-collapse-item title="赞赏支持" name="3" icon="gift-o">
+        <image src="./images/money.jpeg" show-menu-by-longpress="true" style="width: 260px;height: 260px;margin-left: 50%;transform: translateX(-50%);"></image>
+      </van-collapse-item>
+      <van-collapse-item title="常见问题" name="4" icon="records">
+        <van-collapse accordion value="{{ activeChildrenNames }}" bind:change="onChildrenChange">
+          <van-collapse-item title="证件照小程序的功能？" name="1">
+            <view style="margin-bottom: 5px;">支持一键抠图智能识别换背景</view>
+            <view style="margin-bottom: 5px;">支持多种规格尺寸自定义制作</view>
+            <view>支持一键换装换发型美化</view>
+          </van-collapse-item>
+          <van-collapse-item title="找不到想要的尺寸？" name="2">
+            <view>大部分常规的尺寸都支持，可通过一键搜索查找自己想要的尺寸，如果没有可以自定义所需要的尺寸</view>
+          </van-collapse-item>
+          <van-collapse-item title="是否需要付费使用？" name="3">
+            <view>本小程序已有功能全部免费，不过也可以稍微赞赏一下作者的，感谢使用哦</view>
+          </van-collapse-item>
+          <van-collapse-item title="证件照是否存在有效期？" name="4">
+            <view>不存在有效期，但是请您及时保存哦</view>
+          </van-collapse-item>
+        </van-collapse>
+      </van-collapse-item>
+    </van-collapse>
+  </view>
+</view>

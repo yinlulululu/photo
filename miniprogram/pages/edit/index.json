@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "color-picker": "../../components/color-picker/color-picker"
+
+  }
+}

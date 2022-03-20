@@ -1,0 +1,23 @@
+<!--pages/works/index.wxml-->
+<view class="works">
+  <view class="other-title">我的作品</view>
+  <view class="container" wx:for="{{workList}}" wx:for-index="idx" wx:key="_id" data-index="{{idx}}">
+    <view class="left">
+      <view class="photo">
+        <image style="width: 100%;height: 100%;" src="{{item.tempFilePath}}" bindload="bindload"></image>
+      </view>
+      <view class="msg">
+        <view>{{item.name}} </view>
+        <view>{{item.width}}*{{item.height}} px</view>
+        <view>{{item.date}}</view>
+      </view>
+    </view>
+    <view class="right">
+      <van-dialog id="van-dialog" />
+      <van-icon name="delete-o" style="float: right; font-size: 18px;" size="18px" data-id="{{item._id}}" bindtap="remove" />
+    </view>
+  </view>
+  <view class="none" wx:if="{{!workList.length}}">
+    <image src="../searchs/images/none.png" style="width: 100%;height: 100%;"></image>
+  </view>
+</view>

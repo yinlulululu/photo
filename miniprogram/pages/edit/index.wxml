@@ -1,0 +1,67 @@
+<view class="container">
+  <view class="photo-edit-content">
+    <view class="canvas-view" style="background-color: {{photoBg}};width: {{imageData.width * showScale}}rpx;height: {{imageData.height * showScale}}rpx;">
+      <image style="width: {{width * showScale}}rpx; height: {{height * showScale}}rpx; left: {{left * showScale}}rpx; top: {{top * showScale}}rpx; transform: translate(-50%, -50%) scale({{ scale }}) rotate({{ rotate }}deg);" class="people-photo" src="{{filePath}}" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend"></image>
+
+      <image wx-if="{{cloth.show && cloth.src}}" style="z-index:2;width: {{cloth.width * showScale}}rpx; height: {{cloth.height * showScale}}rpx; left: {{cloth.left * showScale}}rpx; top: {{cloth.top * showScale}}rpx; transform: translate(-50%, -50%) scale({{cloth.scale }}) rotate({{cloth.rotate }}deg);" class="people-photo" src="{{cloth.src}}" data-dataname="cloth" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend">
+      </image>
+
+      <image wx-if="{{hair.show && hair.src}}" style="z-index:1;width: {{hair.width * showScale}}rpx; height: {{hair.height * showScale}}rpx; left: {{hair.left * showScale}}rpx; top: {{hair.top * showScale}}rpx; transform: translate(-50%, -50%) scale({{hair.scale }}) rotate({{hair.rotate }}deg);" class="people-photo" src="{{hair.src}}" data-dataname="hair" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend">
+      </image>
+
+
+    </view>
+  </view>
+  <view class="color-picker-view">
+    <view wx:if="{{showColorPicker}}" class="color-picker-content">
+      <color-picker class="color-picker" colorData="{{colorData}}" rpxRatio="{{rpxRatio}}" bindchangecolor="onChangeColor"></color-picker>
+      <button bindtap="closeColorPicker" size="mini" type="default">确定</button>
+
+    </view>
+  </view>
+  <view class="imgOpt">
+    <van-tabs active="{{ active }}" bind:click="clickTab" color="#2c2c2c">
+      <van-tab title="背景" name="1">
+        <view class="colors">
+          <view bindtap="toggleBg" data-color="white" class="color white {{bgc === 'white' ? 'active' : ''}}">
+            <view wx:if="{{bgc === 'white'}}" class="icon_select"></view>
+          </view>
+          <view bindtap="toggleBg" data-color="blue" class="color blue {{bgc === 'blue' ? 'active' : ''}}">
+            <view wx:if="{{bgc === 'blue'}}" class="icon_select"></view>
+          </view>
+          <view bindtap="toggleBg" data-color="red" class="color red {{bgc === 'red' ? 'active' : ''}}">
+            <view wx:if="{{bgc === 'red'}}" class="icon_select"></view>
+          </view>
+          <view bindtap="toggleBg" data-color="custom" class="color custom {{bgc === 'custom' ? 'active' : ''}}" style="display: flex; align-items: center; justify-content: center;">
+            <!-- <view class="text" style="font-size: 12px;"><text>自定义</text></view> -->
+            <view class="custom-bg" style="background-color: {{colorData.pickerData.hex}};width: 100%;height: 100%;font-size: 12px;color: #fff; margin:0 auto;line-height: 12vw;text-align: center;">自定义</view>
+          </view>
+        </view>
+      </van-tab>
+
+      <van-tab title="服饰" name="2">
+        <scroll-view scroll-y>
+          <view class="clothes">
+            <view class="block" wx:for="{{clothes}}" wx:key="_id">
+              <image src="{{item.file}}" bindtap="selectClothes" data-url="{{item.file}}" style="width: 100%; height: 100%;"></image>
+            </view>
+          </view>
+        </scroll-view>
+      </van-tab>
+
+      <van-tab title="发型" name="3">
+        <scroll-view scroll-y>
+          <view class="hair">
+            <view class="block" wx:for="{{hairs}}" wx:key="_id">
+              <image src="{{item.file}}" bindtap="selectHairs" data-url="{{item.file}}" style="width: 100%; height: 100%;"></image>
+            </view>
+          </view>
+        </scroll-view>
+      </van-tab>
+    </van-tabs>
+
+    <view class="download-view">
+      <button bindtap="composeImage" type="default">合成证件照</button>
+    </view>
+  </view>
+</view>
