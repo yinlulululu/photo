@@ -98,7 +98,7 @@ Page({
     // wx.showLoading({
     //   title: '图片加载中',
     // })
-    this.getImageData();
+    // this.getImageData();
     this.setRpxRatio();
     this.getClothes();
     this.getHairs()
@@ -293,7 +293,7 @@ Page({
     }
     console.log(baseImg, peopleImg, hairImg, clothImg)
     // 组合图片顺序
-    const data = [baseImg, peopleImg, hairImg, clothImg]
+    const data = [baseImg, peopleImg, clothImg, hairImg]
     // 合成图片 返回url
     const {
       result

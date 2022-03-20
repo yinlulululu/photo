@@ -3,10 +3,10 @@
     <view class="canvas-view" style="background-color: {{photoBg}};width: {{imageData.width * showScale}}rpx;height: {{imageData.height * showScale}}rpx;">
       <image style="width: {{width * showScale}}rpx; height: {{height * showScale}}rpx; left: {{left * showScale}}rpx; top: {{top * showScale}}rpx; transform: translate(-50%, -50%) scale({{ scale }}) rotate({{ rotate }}deg);" class="people-photo" src="{{filePath}}" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend"></image>
 
-      <image wx-if="{{cloth.show && cloth.src}}" style="z-index:2;width: {{cloth.width * showScale}}rpx; height: {{cloth.height * showScale}}rpx; left: {{cloth.left * showScale}}rpx; top: {{cloth.top * showScale}}rpx; transform: translate(-50%, -50%) scale({{cloth.scale }}) rotate({{cloth.rotate }}deg);" class="people-photo" src="{{cloth.src}}" data-dataname="cloth" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend">
+      <image wx-if="{{cloth.show && cloth.src}}" style="z-index:1;width: {{cloth.width * showScale}}rpx; height: {{cloth.height * showScale}}rpx; left: {{cloth.left * showScale}}rpx; top: {{cloth.top * showScale}}rpx; transform: translate(-50%, -50%) scale({{cloth.scale }}) rotate({{cloth.rotate }}deg);" class="people-photo" src="{{cloth.src}}" data-dataname="cloth" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend">
       </image>
 
-      <image wx-if="{{hair.show && hair.src}}" style="z-index:1;width: {{hair.width * showScale}}rpx; height: {{hair.height * showScale}}rpx; left: {{hair.left * showScale}}rpx; top: {{hair.top * showScale}}rpx; transform: translate(-50%, -50%) scale({{hair.scale }}) rotate({{hair.rotate }}deg);" class="people-photo" src="{{hair.src}}" data-dataname="hair" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend">
+      <image wx-if="{{hair.show && hair.src}}" style="z-index:2;width: {{hair.width * showScale}}rpx; height: {{hair.height * showScale}}rpx; left: {{hair.left * showScale}}rpx; top: {{hair.top * showScale}}rpx; transform: translate(-50%, -50%) scale({{hair.scale }}) rotate({{hair.rotate }}deg);" class="people-photo" src="{{hair.src}}" data-dataname="hair" bindload="bindload" catchtouchstart="touchstart" catchtouchmove="touchmove" catchtouchend="touchend">
       </image>
 
 
