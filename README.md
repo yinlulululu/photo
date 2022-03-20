@@ -10,12 +10,9 @@
 
 - [云开发文档](https://developers.weixin.qq.com/miniprogram/dev/wxcloud/basis/getting-started.html)
 
-![img](https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/1.png)
+<image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/1.png" width="300" height="600"></image>
+<image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/2.png" width="300" height="600"></image>
+<image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/3.png" width="300" height="600"></image>
 
-![img](https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/2.png)
-
-![img](https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/3.png)
-
-![img](https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/4.png)
-
-![img](https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/5.png)
+<image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/4.png" width="300" height="600"></image>
+<image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/5.png" width="300" height="600"></image>
