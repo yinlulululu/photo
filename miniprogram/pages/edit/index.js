@@ -98,7 +98,7 @@ Page({
     // wx.showLoading({
     //   title: '图片加载中',
     // })
-    // this.getImageData();
+    this.getImageData();
     this.setRpxRatio();
     this.getClothes();
     this.getHairs()

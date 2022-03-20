@@ -6,6 +6,7 @@
 <image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/3.png" width="300" height="600"></image>
 <image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/4.png" width="300" height="600"></image>
 
+<image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/6.png" width="300" height="600"></image>
 <image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/5.png" width="300" height="600"></image>
 
 ## 参考文档
