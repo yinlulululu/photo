@@ -1,4 +1,11 @@
 ## 演示效果
+如果图裂只需三步：
+
+1.打开终端输入 sudo vi /etc/hosts
+
+2.增加一条 185.199.108.133 raw.githubusercontent.com
+
+3.保存退出
 
 <image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/1.png" width="300" height="600"></image>
 <image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/2.png" width="300" height="600"></image>
