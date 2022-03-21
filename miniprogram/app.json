@@ -23,7 +23,11 @@
     "pages/works/index",
     "pages/methods/index",
     "pages/searchs/index",
-    "pages/custom/index"
+    "pages/custom/index",
+    "pages/explore/other_1/index",
+    "pages/explore/other_2/index",
+    "pages/explore/other_3/index",
+    "pages/explore/other_4/index"
   ],
   "window": {
     "backgroundColor": "#F6F6F6",
@@ -48,12 +52,12 @@
     "van-cell": "@vant/weapp/cell/index",
     "van-collapse": "@vant/weapp/collapse/index",
     "van-collapse-item": "@vant/weapp/collapse-item/index"
-
   },
   "tabBar": {
     "color": "#2c2c2c",
     "selectedColor": "#2c2c2c",
-    "list": [{
+    "list": [
+      {
         "pagePath": "pages/home/index",
         "text": "首页",
         "iconPath": "images/tabs/home.png",

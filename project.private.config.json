@@ -47,6 +47,13 @@
           "pathName": "pages/mine/index",
           "query": "",
           "scene": null
+        },
+        {
+          "name": "探索系列",
+          "pathName": "pages/explore/other_1/index",
+          "query": "",
+          "scene": null,
+          "launchMode": "default"
         }
       ]
     }

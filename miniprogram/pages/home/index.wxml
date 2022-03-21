@@ -68,21 +68,23 @@
 
 		<view class="other-content">
 			<view class="other-block">
-				<image class="other-img" src="cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/IMG_6600.jpg"></image>
+				<image class="other-img" bindtap="navigateTo" data-url="/pages/explore/other_1/index" src="cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/IMG_6600.jpg"></image>
 				<view class="other-msg">如何拍证件照会比较好看？</view>
 			</view>
-			<view class="other-block">
-				<image class="other-img" src="cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/WechatIMG76.jpg"></image>
-				<view class="other-msg">证件照好看是怎样的体验？</view>
-			</view>
-		</view>
-		<view class="other-content">
-			<view class="other-block">
+			<view class="other-block" bindtap="navigateTo" data-url="/pages/explore/other_2/index">
 				<image class="other-img" src="cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/WechatIMG75.jpg"></image>
 				<view class="other-msg">有必要去摄影棚照专业的证件照吗？</view>
 			</view>
-			<view class="other-block">
-				<image class="other-img" src="cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/WechatIMG74.jpg"></image>
+
+		</view>
+		<view class="other-content">
+			<view class="other-block" bindtap="navigateTo" data-url="/pages/explore/other_3/index">
+				<image class="other-img" src="cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/WechatIMG76.jpg"></image>
+				<view class="other-msg">证件照好看是怎样的体验？</view>
+			</view>
+			<view class="other-block" bindtap="navigateTo" data-url="/pages/explore/other_4/index">
+				<image class="other-img" src="cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/WechatIMG74.jpg">
+				</image>
 				<view class="other-msg">拍证件照时，要求表情严肃吗？</view>
 			</view>
 		</view>
