@@ -29,10 +29,9 @@ Page({
     const MAX_LIMIT = 30
     const num = this.data.page * MAX_LIMIT
     db.collection('photo_size').where({
-        category_id: this.data.category
+        category_id: this.data.category,
+        _openid: this.data.category === '4' ? getApp().globalData.openid : null
       })
-      .skip(num)
-      .limit(MAX_LIMIT)
       .get({
         success: res => {
           // console.log(arrNum);
