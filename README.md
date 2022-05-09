@@ -6,7 +6,7 @@
 
 2.增加一条 185.199.108.133 raw.githubusercontent.com
 
-3.保存退出
+3.保存退出（所有素材资源以及数据库文件都在resources中，开箱即用，记得来个star哦！）
 
 <image src="https://raw.githubusercontent.com/yinlulululu/photo/master/readme-image/logo.png" width="300" height="300"></image>
 
