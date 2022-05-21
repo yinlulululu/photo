@@ -24,7 +24,7 @@ Page({
       name: '一寸',
       tmpOriginImgSrc: 'cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/tmp/imgDivision/undefined/2022-03-03/1646320757440-0.1356908205569285.png'
     },
-    filePath: 'cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/tmp/imgDivision/undefined/2022-03-03/1646320757440-0.1356908205569285.png',
+    filePath: 'cloud://yinlu-3bit0.7969-yinlu-3bit0-1302890904/home/error.jpeg',
     showScale: 480 / 295,
     rpxRatio: 1, //此值为你的屏幕CSS像素宽度/750，单位rpx实际像素
     showColorPicker: false,
